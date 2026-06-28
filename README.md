@@ -48,9 +48,9 @@ calendar generates an effectively infinite space of date/list URLs; those calend
   are left as dead links; they were not part of the site's content.
 - **Documents recovered.** All 160 PDFs the archive holds for this domain were pulled
   in, including the full run of *Flat Chat* newsletters (2020-2025) plus membership
-  forms, constitutions, rally papers and competition results. Browse them at
-  `old-old-site/austinhealeynsw.com.au/newsletters-archive.html` (also linked from the
-  newsletters page).
+  forms, constitutions, rally papers and competition results. The newsletters page
+  (`old-old-site/austinhealeynsw.com.au/newsletters.html`) lists every newsletter under
+  client-side year tabs (2025 back to 2020), in the same style as the original page.
 
 ## Tools
 
