@@ -1,0 +1,431 @@
+/*-----------------------------------*/
+/*------------- BLOG  ---------------*/
+/*-----------------------------------*/
+/*-----------------------------------*/
+/*---------- BLOG ARTICLE -----------*/
+/*-----------------------------------*/
+.blogArticle {
+  background: none;
+  width: 100%;
+  padding: 1em;
+  margin: .5em 0;
+  display: block;
+}
+.blogArticle h1, .blogArticle h2 {
+  margin: 0;
+  padding: 0;
+  line-height: 1.0em;
+}
+.blogArticle h1 {
+  margin: 0 0 .5em;
+}
+.blogArticle .blogArticleWrap {
+  font-size: 1.0em;
+  line-height: 1.4em;
+}
+.blogArticle .blogArticleWrap p {
+  padding: 0;
+}
+.blogArticle .blogArticleWrap .blogPostHero {
+  float: right;
+  margin: 0em 0em 1em 1em;
+  width: 100%;
+  max-width: 400px;
+}
+.blogArticle .blogArticleWrap .blogPostHero.noImage {
+  display: none;
+}
+.blogArticle .blogSubHead {
+  margin: 0 0 .5em 0;
+  font-size: 0.9em;
+}
+.blogArticle .blogArticlePublish {
+  font-style: italic;
+  font-size: 0.9em;
+  margin: 0 0 1.0em 0;
+}
+.blogArticle .blogNavigation {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  margin-bottom: 1em;
+  font-size: 0.8em;
+}
+.blogArticle .blogNavigation a {
+  padding: 0.4em 1em;
+  border: none;
+}
+.blogArticle .blogNavigation a:before {
+  font-family: fontAwesome;
+  font-size: 0.8em;
+}
+.blogArticle .blogNavigation a.next:before {
+  content: '\f105';
+  float: right;
+  margin-left: .3em;
+}
+.blogArticle .blogNavigation a.previous:before {
+  content: '\f104';
+  margin-right: .3em;
+}
+.blogArticle .blogArticleImages {
+  margin: 1em 0;
+}
+.blogArticle .blogArticleImages .container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  padding: 0;
+}
+.blogArticle .blogArticleImages .container div {
+  width: 24%;
+}
+.blogArticle .blogArticleImages .container div img {
+  width: 100%;
+}
+.blogArticle .blogCategoryWrap {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-align: center;
+      align-items: center;
+  margin: 1em 0 0;
+  font-size: 0.8em;
+}
+.blogArticle .blogCategoryWrap:before {
+  content: 'Categories:';
+  margin: 0 .5em 0 0;
+}
+.blogArticle .blogCategoryWrap .articleCategory {
+  display: inline-block;
+  padding: .05em .5em;
+  margin: 0 .1em;
+  color: var(--primaryDark);
+  font-style: italic;
+  border-radius: 0.2em;
+  transition: var(--transition);
+}
+.blogArticle .blogCategoryWrap .articleCategory:hover {
+  color: var(--cta);
+  text-decoration: none;
+}
+
+.socialShare {
+  display: none;
+}
+
+@media all and (max-width: 700px) {
+  .blogNavigation {
+    text-align: center;
+  }
+
+  .blogArticle .blogArticleWrap .blogPostHero {
+    float: none;
+    max-width: none;
+    margin: 1em 0;
+  }
+
+  .blogArticle .blogArticleImages .container div {
+    width: 49%;
+  }
+
+  .categorySection .container {
+    -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+  }
+}
+/*-----------------------------------*/
+/*------------ BLOG POST-------------*/
+/*-----------------------------------*/
+.blogPost {
+  width: 100%;
+  margin: 0 0 var(--gridSpacing);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  transition: var(--transition);
+  color: var(--cardTextColor);
+  background: var(--cardBG);
+  border: var(--cardBorder);
+  box-shadow: var(--cardShadow);
+  cursor: pointer;
+}
+.blogPost .blogPostHero {
+  width: 200px;
+}
+.blogPost .blogPostHero .image {
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.blogPost .blogPostHero .image.noImage {
+  background: var(--opacity10);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.blogPost .blogPostHero .image.noImage:before {
+  content: '\f03e';
+  font-family: fontAwesome;
+  font-size: 5.0em;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  line-height: 1.0em;
+  color: var(--opacity10);
+}
+.blogPost .blogPostHero .image.noImage:after {
+  content: '';
+  color: var(--opacity10);
+  line-height: 1.0em;
+  margin: -50px auto 0;
+}
+.blogPost:hover {
+  box-shadow: var(--cardShadowHover);
+  transform: var(--cardTransformHover);
+  background: var(--cardBGHover);
+  color: var(--cardTextColor);
+}
+.blogPost:hover .blogPostDetails {
+  cursor: pointer;
+}
+.blogPost:hover .blogPostDetails a.blogBtn {
+  transition: var(--transition);
+  color: var(--white);
+  border-color: var(--cta);
+  background: var(--cta);
+}
+.blogPost .blogPostDetails {
+  width: 70%;
+  width: calc(100% - 200px);
+  padding: 1em;
+  transition: var(--transition);
+}
+.blogPost .blogPostDetails .blogTitle {
+  font-size: 1.3em;
+  line-height: 1.0em;
+  padding: 0;
+  margin: 0;
+  color: var(--cardHeadingColor);
+  font-family: var(--cardHeadingFont);
+  font-weight: var(--cardHeadingWeight);
+}
+.blogPost .blogPostDetails .blogPublsihInfo {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  line-height: 1.0em;
+  padding: 0.5em 0 1em;
+}
+.blogPost .blogPostDetails .blogPostAuthor, .blogPost .blogPostDetails .blogPostDate {
+  font-style: italic;
+  color: inherit;
+  font-size: 0.8em;
+  padding: 0;
+  margin-left: .3em;
+}
+.blogPost .blogPostDetails .blogPostText {
+  line-height: 1.4em;
+  padding: 0.4em 0;
+}
+.blogPost .blogPostDetails a.blogBtn {
+  display: inline-block;
+  text-decoration: none;
+}
+.blogPost .blogPostDetails a.blogBtn button {
+  transition: none;
+  display: inline-block;
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+}
+
+@media all and (max-width: 700px) {
+  .blogPost .blogPostHero {
+    width: 100%;
+    max-width: none;
+    max-height: none;
+    min-height: 15em;
+    margin: 0 0 1em;
+  }
+
+  .blogPost .blogPostDetails {
+    width: 100%;
+  }
+}
+/*-----------------------------------*/
+/*----------- BLOG WIDGET------------*/
+/*-----------------------------------*/
+.blog-widget {
+  width: 100%;
+  max-width: none;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.blog-widget .blog-widget-heading {
+  width: 100%;
+  font-size: 1.5em;
+  font-family: var(--headingFont);
+  font-weight: var(--headingWeight);
+  color: var(--headingColor);
+  margin-bottom: 1em;
+}
+.blog-widget .blog-widget-article {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  transition: var(--transition);
+  color: var(--cardTextColor);
+  background: var(--cardBG);
+  border: var(--cardBorder);
+  box-shadow: var(--cardShadow);
+  cursor: pointer;
+}
+.blog-widget .blog-widget-article:nth-last-child(1) {
+  border-bottom: none;
+}
+.blog-widget .blog-widget-article .blog-widget-article-img {
+  width: 100%;
+}
+.blog-widget .blog-widget-article .blog-widget-article-img .blog-widget-article-imgFrame {
+  width: 100%;
+  height: 0;
+  padding-bottom: 60%;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  position: relative;
+  overflow: hidden;
+}
+.blog-widget .blog-widget-article .blog-widget-article-img.noImage {
+  display: none;
+}
+.blog-widget .blog-widget-article:hover {
+  box-shadow: var(--cardShadowHover);
+  transform: var(--cardTransformHover);
+  background: var(--cardBGHover);
+  color: var(--cardTextColor);
+}
+.blog-widget .blog-widget-article:hover .blog-widget-article-content-button {
+  background: var(--cta);
+  border-color: var(--cta);
+  color: var(--white);
+}
+.blog-widget .blog-widget-article .blog-widget-article-preview {
+  width: 100%;
+  padding: 1em .5em 5em;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+}
+.blog-widget .blog-widget-article .blog-widget-article-preview .blog-widget-article-preview-title {
+  line-height: 1em;
+  padding: .5em 0;
+  color: var(--cardHeadingColor);
+  font-family: var(--cardHeadingFont);
+  font-weight: var(--cardHeadingWeight);
+}
+.blog-widget .blog-widget-article .blog-widget-article-preview .blog-widget-article-content-subheading {
+  font-weight: bold;
+  line-height: 1.2em;
+  margin: 0.5em 0;
+}
+.blog-widget .blog-widget-article .blog-widget-article-preview .blog-widget-article-author {
+  font-size: .8em;
+  margin-bottom: .3em;
+  font-style: italic;
+  line-height: 1.0em;
+}
+.blog-widget .blog-widget-article .blog-widget-article-preview .blog-widget-article-date {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  font-size: .8em;
+  line-height: 1.0em;
+  font-style: italic;
+}
+.blog-widget .blog-widget-article .blog-widget-article-preview .blog-widget-article-date .blog-widget-article-date-date {
+  margin-right: .2em;
+}
+.blog-widget .blog-widget-article .blog-widget-article-preview .blog-widget-article-content-text {
+  padding: .6em 0;
+  line-height: 1.3em;
+}
+.blog-widget .blog-widget-article .blog-widget-article-preview .blog-widget-article-content-button {
+  display: block;
+  width: 100%;
+  max-width: 10em;
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  right: 1em;
+  margin: auto;
+}
+
+/*-----------------------------------*/
+/*---------- BLOG SIDE MENU ---------*/
+/*-----------------------------------*/
+.blogArchive {
+  margin: 1em auto 2em;
+  padding: 0;
+}
+.blogArchive:before {
+  font-family: var(--headingFont);
+  content: "Previous Posts";
+  display: block;
+  font-size: 1.4em;
+  color: var(--headingColor);
+  margin: 0 0 10px;
+  font-weight: var(--headingWeight);
+}
+
+.blogMenu .categoryMenu {
+  margin: 1em auto 2em;
+  padding: 0;
+}
+.blogMenu .categoryMenu:before {
+  font-family: var(--headingFont);
+  content: "Categories";
+  display: block;
+  font-size: 1.4em;
+  color: var(--headingColor);
+  margin: 0 0 10px;
+  font-weight: var(--headingWeight);
+}

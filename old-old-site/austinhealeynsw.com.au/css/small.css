@@ -1,0 +1,543 @@
+/* ---------------------------------- */
+/* ------ MAIN BODY OF WEBSITE ------ */
+/* ---------------------------------- */
+html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 {
+  -webkit-text-size-adjust: none;
+  /* This stops the iPhone from automatically changing the size of the text when you flip the phone */
+}
+
+.outerWrap.menu-open {
+  cursor: pointer;
+}
+
+body {padding-left: 0;}
+
+
+.desktop-hide,
+a.desktop-hide {
+  display: block !important;
+}
+
+.mobile-hide,
+a.mobile-hide,
+.viewCartContainer #viewCart {
+  display: none !important;
+}
+
+.textSection .siteContent, .categorySection .siteContent, .viewCart .siteContent {
+  padding: 3em 0;
+}
+
+.contentWrap section:last-of-type > div:last-of-type .siteContent {
+  padding-bottom: 3em;
+}
+
+.textSection + .photoSection .siteContent {padding-bottom:3em;}
+
+.scrollText{
+  
+  padding:10px 20px;
+  border:1px solid #cf1938;
+  display:inline-block!important;
+  border-radius: 100px;
+  color:#cf1938;
+  width:100%;
+  text-align: center;
+  background:rgba(207, 25, 56, .06);
+}
+
+.scrollText:after {
+  content:"\f061";
+  font-family:fontawesome;
+  padding-left:10px;
+  font-weight:900;
+  font-size:1em;
+}
+
+#navToggleWrap #viewCart {
+  display:block;
+}
+
+.accountsTopBar #viewCart {
+  display:none;
+}
+/* ---------------------------------- */
+/* ------------ SIDEBAR ------------- */
+/* ---------------------------------- */
+.sidebar,
+#outerSidebar {
+  display: none;
+}
+
+.siteBottom.activeOuterSidebar {flex-wrap:wrap;}
+
+.activeOuterSidebar #outerSidebar {
+  width:100%;
+  order: 2;
+}
+
+/* ---------------------------------- */
+/* -------- VIEW CART BUTTON -------- */
+/* ---------------------------------- */
+#viewCart {
+  position: static;
+  border: 0px solid transparent;
+}
+#viewCart .itemCount, #viewCart .total {
+  display: inline-block;
+}
+
+/* ---------------------------------- */
+/* ----------- NAVIGATION ----------- */
+/* ---------------------------------- */
+#menu {
+  display: none;
+}
+
+#navToggleWrap {
+  width: 100%;
+  background: var(--highlightTone);
+  color: #fff;
+  display: -ms-flexbox;
+  display: flex;
+}
+#navToggleWrap > #navToggle, #navToggleWrap > a {
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  padding: 10px 0;
+  line-height: 1em;
+  position: static;
+  cursor: pointer;
+  text-decoration: none;
+  background: none;
+  color: #fff;
+}
+#navToggleWrap > #navToggle:after, #navToggleWrap > a:after {
+  line-height: 1em;
+  display: block;
+  text-align: center;
+  margin: 8px 0 2px;
+}
+#navToggleWrap > #navToggle:before, #navToggleWrap > a:before {
+  font-family: FontAwesome;
+  font-size: 1em;
+  line-height: 1em;
+  display: block;
+  text-align: center;
+  margin: 2px 0;
+}
+#navToggleWrap > #navToggle:after, #navToggleWrap > #navToggle span, #navToggleWrap > a:after, #navToggleWrap > a span {
+  font-size: 11px;
+  text-transform: uppercase;
+}
+#navToggleWrap #navToggle:before {
+  content: "\f0c9";
+}
+#navToggleWrap #navToggle:after {
+  content: "Menu";
+}
+#navToggleWrap .blank:before {
+  content: "\f067";
+}
+#navToggleWrap a[href="#"], 
+#navToggleWrap a[href*="$"],
+#navToggleWrap .toContactPage {
+  display: none;
+}
+#navToggleWrap .address:after {
+  content: "address";
+}
+#navToggleWrap .facebook:after {
+  content: "facebook";
+}
+#navToggleWrap .twitter:after {
+  content: "twitter";
+}
+#navToggleWrap .instagram:after {
+  content: "instagram";
+}
+#navToggleWrap .googlePlus:after {
+  content: "googlePlus";
+}
+#navToggleWrap .pinterest:after {
+  content: "pinterest";
+}
+#navToggleWrap .linkedIn:after {
+  content: "linkedIn";
+}
+#navToggleWrap .blank:after {
+  content: "blank";
+}
+#navToggleWrap .youTube:after {
+  content: "youTube";
+}
+#navToggleWrap .email:after {
+  content: "enquire";
+}
+#navToggleWrap .phone:after {
+  content: "phone";
+}
+
+#mobileMenu {
+  display: inline-block;
+  background: var(--darkTone);
+}
+#mobileMenu nav {
+  display: none;
+}
+#mobileMenu nav > li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+#mobileMenu li {
+  list-style-type: none;
+}
+#mobileMenu li a {
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+#mobileMenu li span {
+  padding: 10px;
+  display: block;
+  color: #fff;
+}
+#mobileMenu .parent > span:after {
+  content: "\f107";
+  font: 1em fontawesome;
+  margin-left: 10px;
+  transition: .3s;
+  transform: rotate(0deg);
+  display: inline-block;
+}
+#mobileMenu .parent.open > span:after {
+  transform: rotate(180deg);
+}
+#mobileMenu .current > span, #mobileMenu .current > a {
+  opacity: 0.5;
+}
+
+#mobileMenu nav {
+  display: inline-block;
+  width: 100%;
+}
+
+#mobileMenu {
+  position: fixed;
+  top: 0;
+  left: -80%;
+  width: 80%;
+  height: 100%;
+  z-index: 10000;
+  overflow: scroll;
+  transition: .5s ease-out;
+}
+#mobileMenu.menu-open {
+  left: 0;
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ----------- SUB MENU ----------- */
+#mobileMenu li ul {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: rgba(0, 0, 0, 0.3);
+}
+#mobileMenu li ul li {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#mobileMenu li ul a {
+  padding-left: 30px;
+}
+
+/* ---------------------------------- */
+/* ------------- FOOTER ------------- */
+/* ---------------------------------- */
+#footerBottom {
+  padding: 0 0 4em 0;
+}
+#footerBottom .container {
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+#footerBottom nav {
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  /*background:rgba(0,0,0,.2);*/
+}
+#footerBottom nav li {
+  width: 100%;
+}
+#footerBottom .footerRight {
+  text-align: center;
+}
+
+/*----------------------------------------------*/
+/*--------------- ENQUIRY FORM -----------------*/
+/*----------------------------------------------*/
+#enquiry, .enqLeft, .enqRight {
+  width: 100%;
+  max-width: 100%;
+  display: inline-block;
+}
+
+.enqLeft {
+  padding: 5px 5px 5px 0;
+}
+
+.checkout .siteContent .checkoutLeft .checkoutDetails .checkoutDetailsRow.enqRow {
+  display: block;
+}
+
+/* ---------------------------------- */
+/* ------------- GRID --------------- */
+/* ---------------------------------- */
+.col-1-small, 
+.blog-widget .blog-widget-article,
+section[class*="imgC"] .col-4 {
+  width: 100%;
+  width: calc(100% - var(--gridPadding));
+}
+
+.col-2-small, .contentImgRow .item, .cartThumb {
+  width: 50%;
+  width: calc(50% - var(--gridPadding));
+}
+
+/*.col-1,
+.col-2,
+.col-3,
+.col-3x2,
+.col-4,
+.col-4x3,
+.col-5,
+.col-5x2,
+.col-5x3,
+.col-5x4,
+.col-6,
+.col-6x5 {
+    width: 100%;
+    width: calc(100% - var(--gridPadding));
+}*/
+/* ---------------------------------- */
+/* -------- BANNER OF WEBSITE ------- */
+/* ---------------------------------- */
+
+.fixedTopWrap {
+  position: absolute;
+  top: 60px;
+}
+
+#banner {
+  border-top: 0 solid transparent;
+background:#cf1938;
+}
+
+.siteTop {padding-top: 0;}
+
+.logo {
+  margin: auto;
+  position: relative!important;
+  top:0!important;
+  left:0px!important;
+  max-width: 180px!important;
+  padding:10px 0;
+      
+}
+
+#subBanner .container.hasImage {
+  background-size: cover !important;
+  background-position: center center !important;
+  padding-bottom: 40%;
+}
+
+/* ---------------------------------- */
+/* -------- GRAPHICAL BUTTONS ------- */
+/* ---------------------------------- */
+/* ---------------------------------- */
+/* -------- SLIDESHOW STYLES -------- */
+/* ---------------------------------- */
+/* ---------------------------------- */
+/* ---------- CUSTOM FOOTER --------- */
+/* ---------------------------------- */
+
+#footerTop .col-3 {text-align:center;}
+
+#footerTop .contactContainer {
+  text-align: center;
+}
+
+#footerTop .col-3:first-child {
+  order: 2;
+  margin-top: 1em;
+}
+
+/* ---------------------------------- */
+/* -------- PREMIUM/WORKS CSS ------- */
+/* ---------------------------------- */
+
+#enquire-dropdown #enquiry {
+    max-width: 100%;
+}
+
+/* ---------------------------------- */
+/* ----------- CUSTOM CSS ----------- */
+/* ---------------------------------- */
+
+.half {
+  width:100%!important;
+}
+
+.flick-inner:after {
+ content:"";
+  position: absolute;
+  width:400px;
+  height:130px;
+  background:url(/car_nobgV2.png) center center no-repeat;
+  right:-10px;
+  top:300px!important;
+  z-index: 99;
+  animation: drive 2s forwards;
+  animation-delay: 3s;
+  transform: translateX(40px);
+  background-size:cover;
+}
+
+.siteContent h2 {
+  font-size:1.4em;
+}
+
+
+@keyframes drive {
+  0% {transform: translateX(40px)}
+  100% {transform: translateX(0px)}
+}
+
+.flick-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;  
+  bottom: 200px;  
+  max-width: none;
+  margin: auto;
+  padding: 0 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* ADJUST TEXT POSITION HORIZONTALLY */
+  align-items: center; 
+  font-size: 1em;
+}
+
+.flick-title strong {
+  display:block;
+  font-size:.2em;
+  margin-bottom:-10px;
+  letter-spacing: 0.6em;
+}
+
+.flick-title, .flick-sub-text {
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  text-transform:uppercase;
+}
+
+.flick-title {
+  font-size: 2em!important;;
+  color: #fff;  
+  line-height: .8em;
+  text-align: center;
+}
+
+.flick-sub-text {
+  font-size: 1em;
+  color: #fff;
+  font-weight:bold;
+  margin-top:-10px;
+}
+
+.flick-but {
+  position: relative;
+  z-index: 2;
+  width: 15em;
+  margin-top: 0.8rem;
+  display:none;
+}
+
+.anchorarrow a {
+  position: absolute;
+  bottom:80px;
+  z-index: 99;
+  right:0;
+  text-decoration:none;
+  height:50px;
+  width:50px;
+  background:#fff;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transition: all .3s ease;
+}
+
+.anchorarrow a:before {
+  content:"\f063";
+  font-family: fontawesome;
+  font-size:1.7em;
+  color:#c91937;
+  transition: all .3s ease;
+
+} 
+
+.anchorarrow a:hover {
+  background:#c91937;
+  
+}
+
+.anchorarrow a:hover:before {
+  color:#fff;
+  
+}
+
+#section3 .container {
+  padding:10px!important;
+}
+
+#footerTop .logo {
+  margin:1em auto;
+}
+
+
+.butFrame {
+  width:100%;
+}
+
+
+/* ----------- SVG OVERLAYS ---------- */
+
+#subBannerHome > .container:after,
+#subBannerHome .flickerplate:after,
+.whiteSectionBefore:before {
+  height: 40px;
+}
+
+.siteBottom section:not([class*="M_"]) + [class*="M_"]:after {height: 40px;}
+
+.siteBottom section:not([class*="M_"]) + [class*="M_"] {padding-top: 0;}
+
+.siteBottom section:last-child, .itemSection {padding-bottom: 20px;}
+
+.siteBottom section.categorySection {padding-bottom: 0;}
+
+footer:before {
+  top: -39px;
+  height: 40px;
+}
+

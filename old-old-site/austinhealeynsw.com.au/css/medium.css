@@ -1,0 +1,24 @@
+/* ---------------------------------- */
+/* ------------- GRID --------------- */
+/* ---------------------------------- */
+.col-1-med {
+  width: 100%;
+  width: calc(100% - var(--gridPadding));
+}
+
+.col-2-med, 
+.contentImgRow .item, 
+.cartThumb,
+.blog-widget .blog-widget-article {
+  width: 50%;
+  width: calc(50% - var(--gridPadding));
+}
+
+.col-3-med {
+  width: 33.333%;
+  width: calc(33.333% - var(--gridPadding));
+}
+
+/* ---------------------------------- */
+/* ------------- OTHER -------------- */
+/* ---------------------------------- */
